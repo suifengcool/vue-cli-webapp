@@ -1,5 +1,5 @@
 import './styles/base.less';
-
+import './xxb-ui.flexible.js'
 import {Layout} from './components/layout';
 
 window.document.addEventListener('touchstart', function (event) {

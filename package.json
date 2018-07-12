@@ -26,10 +26,10 @@
     "url": "https://github.com/suifengcool/xxb-ui.git"
   },
   "scripts": {
-    "dev": "webpack-dev-server --content-base example/ --port 4321 --inline --hot --host 0.0.0.0 --config build/webpack.dev.conf.js",
-    "build:rem:components": "webpack --config build/webpack.components.rem.conf.js",
-    "build:prod": "webpack --config build/webpack.prod.conf.js",
-    "build": "npm run build:rem:components && npm run build:prod && gulp --gulpfile build/build.prod.js"
+    "dev": "webpack-dev-server --content-base example/ --port 8080 --inline --hot --host 0.0.0.0 --config build/webpack.dev.conf.js",
+    "build:demand": "webpack --config build/webpack.demand.conf.js",
+    "build:all": "webpack --config build/webpack.all.conf.js",
+    "build": "npm run build:demand && npm run build:all && gulp --gulpfile build/gulp.js"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

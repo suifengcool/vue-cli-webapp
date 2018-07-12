@@ -1,3 +1,4 @@
+// 全量打包
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -5,7 +6,7 @@ const distCommonWebpackConfig = require('./webpack.common.conf');
 
 module.exports = merge(distCommonWebpackConfig, {
   entry: {
-    'xxb-ui.rem': './src/xxb-ui.js'
+    'xxb-ui': './src/xxb-ui.js'
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({
@@ -15,6 +16,6 @@ module.exports = merge(distCommonWebpackConfig, {
         }              
       }
     }),
-    new ExtractTextPlugin('xxb-ui.rem.css')     
+    new ExtractTextPlugin('xxb-ui.css')     
   ],
 });

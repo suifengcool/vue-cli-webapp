@@ -10,8 +10,8 @@ module.exports = merge(baseWebpackConfig, {
       publicPath: '/dist/',
       filename: "[name].js",
       chunkFilename: "[name].js",
-      library: 'xxb-ui',
-      libraryTarget: 'umd'
+      library: 'xxb-ui',              // 将打包后的模块存在于全局的变量 xxb-ui 上面
+      libraryTarget: 'umd'            // 指定你的模块输出类型，commonjs, AMD, script形式, UMD模式
     },
     externals: {
       vue: 'vue'

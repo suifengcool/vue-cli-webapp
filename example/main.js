@@ -1,9 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import XXBUI from '../src/xxb-ui.js';
-
-import Index from './routers/index.vue';
 import App from './app.vue';
+import Index from './routers/index.vue';
 
 Vue.use(VueRouter);
 Vue.use(XXBUI);

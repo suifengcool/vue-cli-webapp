@@ -37,7 +37,7 @@ module.exports = {
           postcss: [
             require('autoprefixer')({
                 browsers: ['Android >= 4', 'Explorer >= 10', 'iOS >= 6'], cascade: false
-            })//调用autoprefixer插件
+            })
           ]               
         }
     })      
