@@ -1,15 +1,13 @@
-// import './styles/base.less';
+import './styles/base.less';
 
-// import {Layout} from './components/layout';
-// import {Popup} from './components/popup';
+import {Layout} from './components/layout';
 
 window.document.addEventListener('touchstart', function (event) {
     /* Do Nothing */
 }, false);
 
 const install = function (Vue) {
-    // Vue.component(Layout.name, Layout);
-    // Vue.component(Popup.name, Popup);
+    Vue.component(Layout.name, Layout);
 };
 
 if (typeof window !== 'undefined' && window.Vue) {

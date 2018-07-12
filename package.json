@@ -23,7 +23,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://git.meiwan.me/zhangl/vmui.git"
+    "url": "https://github.com/suifengcool/xxb-ui.git"
   },
   "scripts": {
     "dev": "webpack-dev-server --content-base example/ --port 4321 --inline --hot --host 0.0.0.0 --config build/webpack.dev.conf.js",
