@@ -12,7 +12,7 @@ module.exports = {
       exclude: /node_modules/
     },{
       test: /\.less$/,
-      loader:  'style-loader!less-loader',
+      loader:  'style-loader!css-loader!less-loader',
       exclude: /node_modules/
     },{
       test: /\.css$/,
