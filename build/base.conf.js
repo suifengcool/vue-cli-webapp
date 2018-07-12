@@ -23,6 +23,9 @@ module.exports = {
       loader: 'json-loader',
       exclude: /node_modules/
     },{
+      test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+      loader: 'url-loader'
+    },{
       test: /\.ttf/,
       loader: 'file-loader',
       exclude: /node_modules/
