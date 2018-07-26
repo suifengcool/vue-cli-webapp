@@ -1,20 +1,10 @@
 <template>
   <section class="xxb-flexview">
-    <!-- <slot name="navbar" v-if="showNavbar">
-      <xxb-navbar :title="title" v-if="!!title">
-          <router-link :to="link || '/'" slot="left">
-            <xxb-navbar-back-icon></xxb-navbar-back-icon>
-          </router-link>
-      </xxb-navbar>
-    </slot> -->
-
-    <slot name="top"></slot>
+    <slot name="navbar"></slot>
 
     <section class="xxb-scrollview" ref="scrollView" id="scrollView">
       <slot></slot>
     </section>
-
-    <slot name="bottom"></slot>
 
     <slot name="tabbar"></slot>
   </section>
@@ -22,21 +12,7 @@
 
 <script type="text/babel">
   export default {
-    name: 'xxb-layout',
-    props: {
-      link: {
-        type: String,
-        default: ''
-      },
-      title: {
-        type: String,
-        default: ''
-      },
-      showNavbar: {
-        type: Boolean,
-        default: true
-      }
-    }
+    name: 'xxb-layout'
   }
 </script>
 
@@ -44,7 +20,7 @@
 @import "../../../styles/variables";
 
 .xxb-flexview {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -54,7 +30,7 @@
 
 .xxb-scrollview {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
@@ -68,7 +44,6 @@
     height: @body-padding-bottom;
   }
 }
-
 
 .ios .xxb-scrollview {
   margin-top: 1px;

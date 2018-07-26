@@ -31,6 +31,7 @@ module.exports = {
       exclude: /node_modules/
     }]
   },
+  resolve: { alias: { 'vue': 'vue/dist/vue.js' } },
   plugins: [
     new webpack.LoaderOptionsPlugin({
       options: {
