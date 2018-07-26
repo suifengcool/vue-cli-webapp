@@ -1,0 +1,52 @@
+/* 垂直居中 */
+.cross-center
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+
+/* 水平居中 */
+.main-center
+	display: flex
+	display: -webkit-flex
+	justify-content: center
+
+/* 水平垂直居中 */
+.center-center
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+
+/* 边款1px */
+.border-circle
+    position: relative;
+    &:after
+        border: 1px solid #e6e6e6;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+        pointer-events: none;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        content: '';
+
+/* 底部边款1px */
+.border-bottom
+    position: relative;
+    &:after
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      transform: scaleY(.5);
+      background: #e6e6e6;
+
+
