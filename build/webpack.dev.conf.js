@@ -10,8 +10,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
-const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
+
+// 获取本机 ip 地址，用于 broswer 打开 server 后，真机扫码测试
+var os = require('os')
+var HOST
+var networkInterfaces = os.networkInterfaces()
+
+Object.keys(networkInterfaces).forEach(function(key){
+  networkInterfaces[key].forEach(function(ele,index){
+    if(ele.family === 'IPv4' && ele.address !== '127.0.0.1'){
+      HOST = ele.address
+    }
+  })
+})
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
