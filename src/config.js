@@ -14,5 +14,7 @@ export default {
       }
       document.body.appendChild(i)
     }
-  }
+  },
+
+  
 }

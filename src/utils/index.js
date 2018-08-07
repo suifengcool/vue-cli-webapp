@@ -44,3 +44,27 @@ export const editAwrray = (arr) => {
   arr = newArr
   return arr
 }
+
+// object key序列化
+function obj2key(obj, keys){  
+  var n = keys.length, key = [];  
+  while(n--){  
+    key.push(obj[keys[n]]);  
+  }  
+  return key.join('|');  
+}  
+
+// 去重操作  
+// eg: let arr = uniqeByKeys(arr,['shop_id']);
+export const uniqeByKeys = (array,keys) => {  
+  var arr = [];  
+  var hash = {};  
+  for (var i = 0, j = array.length; i < j; i++) {  
+    var k = obj2key(array[i], keys);  
+    if (!(k in hash)) {  
+      hash[k] = true;  
+      arr .push(array[i]);  
+    }  
+  }  
+  return arr ;  
+} 
